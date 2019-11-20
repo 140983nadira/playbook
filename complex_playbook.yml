@@ -15,7 +15,6 @@
        content: "Hello World!"
        dest: C:\Inetpub\wwwroot\index.html
 
-
 - name: This is second playbook
   hosts: all
   tasks:
@@ -25,7 +24,7 @@
               state: directory
       - name: Enabling the sharing
         win_share:
-          name: windown_share
+          name: windows_share
           description: this is a custom share
           path: C:\custom_share
           full: Administrator
@@ -34,5 +33,4 @@
         win_copy:
               content: "This is a shared content"
               dest: C:\\custom_share\\shared.txt
-
 ...
